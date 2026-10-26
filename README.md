@@ -27,6 +27,20 @@ Split: 80% training (16,511) / 20% validation (4,127).
 | Training accuracy | 95.3% |
 | Validation accuracy | 90.4% (peak 91.1%) |
 
+## Evaluation
+Per-class evaluation on the 4,127-image validation set (macro F1: 0.874).
+
+![Confusion Matrix](confusion_matrix.png)
+
+**Best classes:** Tomato Yellow Leaf Curl Virus (F1 0.976), Tomato healthy (0.975), Tomato Bacterial spot (0.953).
+
+**Weakest classes:** Potato healthy (recall 0.48, only 29 validation images), Tomato mosaic virus (recall 0.72, 74 images), Tomato early blight (F1 0.74).
+
+**Observations:**
+- The dataset is imbalanced (74 to 680 images per class), so rarer classes perform worse.
+- Visually similar diseases get confused, e.g. Spider mites predicted as Target Spot, and Early blight vs Late blight.
+- Next steps: class weighting, data augmentation, and transfer learning (MobileNetV2).
+  
 ## How to run
 ```bash
 git clone https://github.com/YOUR-USERNAME/FarmSense-AI.git
