@@ -4,7 +4,7 @@ A deep learning model that identifies crop leaf diseases from a photo,
 built to help farmers detect problems early.
 
 ## Demo
-![Demo](demo.png)
+![Demo](Demo.png)
 
 ## Problem
 Crop diseases reduce yield, and farmers often cannot identify them early.
